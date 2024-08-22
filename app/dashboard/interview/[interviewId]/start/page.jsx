@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import QuestionsSection from './_components/QuestionsSection';
 import RecordAnswerSection from './_components/RecordAnswerSection';
 import { int } from 'drizzle-orm/mysql-core';
+import { Button } from '@/components/ui/button';
 
 function StartInterview({params}) {
 
@@ -44,6 +45,14 @@ function StartInterview({params}) {
         interviewData={interviewData}
         />
 
+       </div>
+       <div className='flex justify-end gap-6'>
+        { activeQuestionIndex>0&&
+         <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex-1)}>Previous question</Button>}
+        {activeQuestionIndex!=mockInterviewQuestion?.length-1&& 
+         <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex+1)}>Next question</Button>}
+        { activeQuestionIndex==mockInterviewQuestion?.length-1&&
+          <Button>End Interview</Button>}
        </div>
     </div>
   )
