@@ -7,6 +7,7 @@ import QuestionsSection from './_components/QuestionsSection';
 import RecordAnswerSection from './_components/RecordAnswerSection';
 import { int } from 'drizzle-orm/mysql-core';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 function StartInterview({params}) {
 
@@ -52,7 +53,9 @@ function StartInterview({params}) {
         {activeQuestionIndex!=mockInterviewQuestion?.length-1&& 
          <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex+1)}>Next question</Button>}
         { activeQuestionIndex==mockInterviewQuestion?.length-1&&
-          <Button>End Interview</Button>}
+        <Link href={'/dashboard/interview/'+interviewData?.mockId+"/feedback"}>
+          <Button>End Interview</Button>
+         </Link>}
        </div>
     </div>
   )
