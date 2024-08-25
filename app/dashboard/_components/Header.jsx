@@ -1,6 +1,7 @@
 "use client";
 import { UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react';
 
@@ -23,12 +24,12 @@ function Header() {
       <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
       ${path=='/dashboard/question'&&'text-primary font-bold'}
       `}>Questions</li>
-      <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-      ${path=='/dashboard/Upgrade'&&'text-primary font-bold'}
-      `}>Upgrade</li>
-      <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
-      ${path=='/dashboard/How it works?'&&'text-primary font-bold'}
-      `}>How it works?</li>
+      <Link href={'/dashboard/upgrade'} className={`hover:text-primary hover:font-bold transition-all cursor-pointer
+      ${path == '/dashboard/Upgrade' && 'text-primary font-bold'}
+      `}>Upgrade</Link>
+      <Link href={'/dashboard/about'} className={`hover:text-primary hover:font-bold transition-all cursor-pointer
+      ${path == '/dashboard/about' && 'text-primary font-bold'}
+      `}>How it works?</Link>
     </ul>
     <UserButton/>
   </div>
