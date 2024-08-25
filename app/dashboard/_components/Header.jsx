@@ -26,9 +26,10 @@ function Header() {
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
       ${path == '/dashboard/question' && 'text-primary font-bold'}
       `}>Questions</li>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
+        <Link href={'/dashboard/upgrade'} className={`hover:text-primary hover:font-bold transition-all cursor-pointer
       ${path == '/dashboard/Upgrade' && 'text-primary font-bold'}
-      `}>Upgrade</li>
+      `}>Upgrade</Link>
+
         <Link href={'/dashboard/about'} className={`hover:text-primary hover:font-bold transition-all cursor-pointer
       ${path == '/dashboard/about' && 'text-primary font-bold'}
       `}>How it works?</Link>
