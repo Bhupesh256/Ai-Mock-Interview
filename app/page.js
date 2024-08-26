@@ -13,8 +13,12 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <h2>Welcome to Ai-mock-interview</h2>
-      <Button onClick={onPress}>Hello</Button>
+      <h1 class="mb-4 my-36 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center ">Your Personal AI Interview Coach</h1>
+      <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">Double your chances of landing that job offer with our AI-powered interview prep</p>
+      <div className="flex justify-center items-center">
+      <Button className="text-center hover:scale-105 hover:shadow-lg" onClick={onPress}>Get Started</Button>
+      </div>
+
     </div>
   );
 }
