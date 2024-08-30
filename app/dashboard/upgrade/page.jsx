@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="">
-      <h2 class="font-bold text-3xl text-center">Upgrade</h2>
+      <h2 class="font-bold text-3xl text-center mt-5">Upgrade</h2>
       <h2 class="text-center  text-gray-500">Upgrade to monthly plan to access unlimited mock interview</h2>
       <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
